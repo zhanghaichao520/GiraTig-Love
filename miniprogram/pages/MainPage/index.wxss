@@ -1,0 +1,115 @@
+.form-cell {
+  padding: 0;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.title {
+  font-size: 12px;
+}
+
+.swiper-image{
+  display: block;
+  height: 100%; 
+  width: 100%;
+  position: relative;
+  background-color: darkgray;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn-notify {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  background-color: #ff5794;
+  color: white;
+  padding: 2px;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 8px; 
+  z-index: 1000; /* 确保按钮显示在最前面 */
+}
+/* 其他样式代码 */
+.small-text {
+  font-size: 8px; /* 根据需要调整字体大小 */
+  color: #333; /* 可选，设置字体颜色 */
+}
+/* 页面样式 */
+.container {
+  padding: 20px;
+}
+
+.btn-calendar {
+  background-color: #ff5794;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note-input-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.note-input-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.note-input {
+  position: relative;
+  background: #fff;
+  padding: 20px; /* 调整 padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  width: 85%;
+  max-width: 500px;
+}
+
+.note-input textarea {
+  width: calc(100% - 5px); /* 确保左右 padding 一致 */
+  height: 450px;
+  margin-bottom: 20px;
+  padding: 15px; /* 设置内边距 */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* 确保 padding 包含在宽度内 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-input button {
+  background-color: #ff5794;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  width: 10%;
+  margin-bottom: 0;
+}
+
+.note-input button:last-child {
+  background-color: #ccc;
+}

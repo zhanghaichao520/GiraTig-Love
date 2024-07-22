@@ -1,0 +1,95 @@
+.calendar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.calendar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.calendar-content {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* 修改宽度，具体值可以根据需要调整 */
+  max-width: 400px; /* 添加最大宽度以限制其过宽 */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  white-space: nowrap; /* 添加这一行 */
+}
+
+.calendar-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-row {
+  display: flex;
+}
+
+.calendar-cell {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.calendar-cell:hover {
+  background: #ffeb3b;
+}
+
+.calendar-cell.selected {
+  background: #ff5794;
+  color: white;
+}
+
+.today-cell {
+  color: #ff0000;
+}
+
+.days-past {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+.remarks {
+  margin-top: 10px;
+}
+
+.remarks textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.calendar-cell.marked {
+  background: #ffeb3b;
+  color: #000;
+}

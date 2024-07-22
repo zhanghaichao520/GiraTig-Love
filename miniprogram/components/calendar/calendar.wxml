@@ -1,0 +1,30 @@
+<view class="calendar-container" wx:if="{{visible}}">
+  <view class="calendar-overlay" bindtap="hideCalendar"></view>
+  <view class="calendar-content">
+    <view class="calendar-header">
+      <button bindtap="prevMonth">《</button>
+      <text>{{year}}年{{month}}月</text>
+      <button bindtap="nextMonth">》</button>
+    </view>
+    <view class="calendar-body">
+      <view class="calendar-row">
+        <block wx:for="{{weekDays}}" wx:key="{{item}}">
+          <view class="calendar-cell">{{item}}</view>
+        </block>
+      </view>
+      <block wx:for="{{dates}}" wx:key="{{item.date}}">
+        <view class="calendar-row">
+          <block wx:for="{{item.week}}" wx:key="{{item.date}}">
+            <view class="calendar-cell" bindtap="selectDate" data-date="{{item.date}}" 
+                  style="background-color: {{item.hasNote ? '#ffeb3b' : item.isToday ? '#ff5794' : ''}}">
+              {{item.day}}
+            </view>
+          </block>
+        </view>
+      </block>
+    </view>
+    <view class="days-past">
+     我们在一起已经{{daysPast}}天啦~
+    </view>
+  </view>
+</view>
